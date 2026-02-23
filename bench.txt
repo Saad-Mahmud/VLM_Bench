@@ -1,0 +1,3 @@
+https://huggingface.co/datasets/MMMU/MMMU_Pro
+https://huggingface.co/datasets/lmms-lab/ScienceQA
+https://huggingface.co/datasets/lmms-lab/SEED-Bench
