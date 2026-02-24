@@ -1,0 +1,18 @@
+Look at the image. Read ONLY the question from the image.
+The answer options are provided below. Choose the single best answer from A to J.
+Write only the letter after "Correct Answer:".
+
+Options:
+A) {A}
+B) {B}
+C) {C}
+D) {D}
+E) {E}
+F) {F}
+G) {G}
+H) {H}
+I) {I}
+J) {J}
+
+Correct Answer:
+

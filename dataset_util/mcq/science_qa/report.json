@@ -1,0 +1,35 @@
+{
+  "dataset_id": "lmms-lab/ScienceQA",
+  "subset": "ScienceQA-IMG",
+  "split": "test",
+  "num_columns": 13,
+  "column_names": [
+    "image",
+    "question",
+    "choices",
+    "answer",
+    "hint",
+    "task",
+    "grade",
+    "subject",
+    "topic",
+    "category",
+    "skill",
+    "lecture",
+    "solution"
+  ],
+  "num_rows": 2017,
+  "rows_with_choices": 2017,
+  "rows_with_list_choices": 2017,
+  "choices_per_query": {
+    "min": 2,
+    "max": 5,
+    "avg": 3.0838,
+    "histogram": {
+      "2": 677,
+      "3": 532,
+      "4": 770,
+      "5": 38
+    }
+  }
+}

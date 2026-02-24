@@ -1,0 +1,33 @@
+{
+  "dataset_id": "MMMU/MMMU_Pro",
+  "subset": "vision",
+  "split": "test",
+  "num_columns": 5,
+  "column_names": [
+    "id",
+    "image",
+    "options",
+    "answer",
+    "subject"
+  ],
+  "num_rows": 1730,
+  "rows_with_options": 1730,
+  "rows_with_list_options": 1730,
+  "options_per_query": {
+    "min": 2,
+    "max": 12,
+    "avg": 8.9318,
+    "histogram": {
+      "2": 28,
+      "3": 42,
+      "4": 124,
+      "5": 41,
+      "6": 16,
+      "7": 12,
+      "8": 31,
+      "9": 221,
+      "10": 1214,
+      "12": 1
+    }
+  }
+}

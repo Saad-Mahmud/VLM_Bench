@@ -1,0 +1,14 @@
+Look at the image and answer the question.
+
+Question:
+{question}
+
+Options:
+A. {A}
+B. {B}
+C. {C}
+D. {D}
+
+Write only the letter after "Correct Answer:".
+
+Correct Answer:

@@ -1,0 +1,5 @@
+Look at the image. The question and options are inside the image.
+Choose the single best answer from A to J.
+Write only the letter after "Correct Answer:".
+
+Correct Answer:

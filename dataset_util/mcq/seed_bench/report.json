@@ -1,0 +1,59 @@
+{
+  "dataset_id": "lmms-lab/SEED-Bench",
+  "split": "test",
+  "num_columns": 12,
+  "column_names": [
+    "answer",
+    "choice_a",
+    "choice_b",
+    "choice_c",
+    "choice_d",
+    "data_id",
+    "data_type",
+    "question",
+    "question_id",
+    "question_type_id",
+    "image",
+    "segment"
+  ],
+  "num_rows": 17990,
+  "choices_check": {
+    "choice_keys": [
+      "choice_a",
+      "choice_b",
+      "choice_c",
+      "choice_d"
+    ],
+    "rows_with_all_4_choices": 17990,
+    "all_rows_have_all_4_choices": true,
+    "choice_presence_histogram": {
+      "4": 17990
+    },
+    "missing_counts_by_choice": {
+      "choice_a": 0,
+      "choice_b": 0,
+      "choice_c": 0,
+      "choice_d": 0
+    }
+  },
+  "images_per_sample": {
+    "rows_with_image_count": 17990,
+    "min": 1,
+    "max": 8,
+    "avg": 2.4619,
+    "histogram": {
+      "1": 14233,
+      "8": 3757
+    }
+  },
+  "images_per_action": {
+    "rows_with_image_count": 17990,
+    "min": 1,
+    "max": 8,
+    "avg": 2.4619,
+    "histogram": {
+      "1": 14233,
+      "8": 3757
+    }
+  }
+}
