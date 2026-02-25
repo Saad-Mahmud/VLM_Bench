@@ -168,8 +168,8 @@ def main() -> None:
     parser.add_argument("--base-port", type=int, default=9009)
     parser.add_argument("--max-model-len", type=int, default=8192)
     parser.add_argument("--health-timeout", type=int, default=300)
-    parser.add_argument("--wait-after-start", type=int, default=300)
-    parser.add_argument("--cooldown", type=int, default=60)
+    parser.add_argument("--wait-after-start", type=int, default=10)
+    parser.add_argument("--cooldown", type=int, default=30)
     parser.add_argument("--terminate-timeout", type=int, default=30)
     parser.add_argument(
         "--drain-timeout",

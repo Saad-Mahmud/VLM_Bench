@@ -1,0 +1,46 @@
+{
+  "dataset_id": "GeorgeBredis/ERQA",
+  "split": "train",
+  "num_columns": 5,
+  "column_names": [
+    "question",
+    "answer",
+    "question_type",
+    "visual_indices",
+    "images"
+  ],
+  "num_rows": 400,
+  "image_count_histogram": {
+    "1": 287,
+    "2": 60,
+    "3": 15,
+    "4": 30,
+    "5": 3,
+    "6": 2,
+    "7": 1,
+    "8": 1,
+    "16": 1
+  },
+  "rows_with_one_image": 287,
+  "rows_with_parsed_choices": 371,
+  "rows_with_one_image_and_choices": 260,
+  "choices_per_question_histogram": {
+    "4": 371
+  },
+  "question_type_histogram": {
+    "Spatial Reasoning": 84,
+    "Action Reasoning": 72,
+    "Trajectory Reasoning": 66,
+    "State Estimation": 55,
+    "Task Reasoning": 38,
+    "Multi-view Reasoning": 37,
+    "Pointing": 34,
+    "Other": 14
+  },
+  "answer_histogram": {
+    "A": 123,
+    "C": 98,
+    "B": 96,
+    "D": 83
+  }
+}

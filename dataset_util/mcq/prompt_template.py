@@ -10,7 +10,7 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_TEMPLATE_ROOT = PROJECT_ROOT / "dataset_util" / "mcq"
-SUPPORTED_DATASETS = ("mmlu_pro", "mmlu_pro_easy", "science_qa", "seed_bench")
+SUPPORTED_DATASETS = ("mmlu_pro", "mmlu_pro_easy", "science_qa", "seed_bench", "erqa")
 
 
 def _parse_options(value: Any) -> list[Any]:
@@ -56,7 +56,7 @@ def render_prompt(
 
     fields: dict[str, Any] = {"question": question}
 
-    if dataset_name in {"science_qa", "seed_bench"}:
+    if dataset_name in {"science_qa", "seed_bench", "erqa"}:
         options = _parse_options(sample.get("options"))
         while len(options) < 4:
             options.append("")
