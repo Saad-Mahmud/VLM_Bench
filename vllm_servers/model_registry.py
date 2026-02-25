@@ -33,6 +33,7 @@ class ModelConfig:
     system_prompt: str | None = None
     system_prompt_hf_file: str | None = None
     chat_template: ChatTemplateKind = ChatTemplateKind.HF_MULTIMODAL_PROCESSOR
+    chat_template_kwargs: dict[str, Any] | None = None
     candidate_format: CandidateFormatter = default_candidate_formatter
     image_placeholder_text: str = "<image>"
 
@@ -153,10 +154,12 @@ def _build_hf_multimodal_base_prompt(runtime: ModelRuntime, text: str) -> str:
         }
     )
 
+    chat_kwargs = dict(runtime.config.chat_template_kwargs or {})
     prompt = runtime.processor.apply_chat_template(
         messages,
         add_generation_prompt=True,
         tokenize=False,
+        **chat_kwargs,
     )
     return str(prompt)
 
@@ -171,10 +174,12 @@ def _build_mistral_base_prompt(runtime: ModelRuntime, text: str) -> str:
             messages.append({"role": "system", "content": runtime.resolved_system_prompt})
         messages.append({"role": "user", "content": user_content})
 
+        chat_kwargs = dict(runtime.config.chat_template_kwargs or {})
         prompt = runtime.tokenizer.apply_chat_template(
             messages,
             add_generation_prompt=True,
             tokenize=False,
+            **chat_kwargs,
         )
         return str(prompt)
 
@@ -341,16 +346,11 @@ MODEL_REGISTRY: dict[str, ModelConfig] = {
         alias="qwen3_vl_8b",
         hf_id="Qwen/Qwen3-VL-8B-Instruct",
         is_multimodal=True,
-        vllm_engine_kwargs={"limit_mm_per_prompt": {"image": 1}},
+        vllm_engine_kwargs={
+            "limit_mm_per_prompt": {"image": 1},
+            "hf_overrides": {"text_config": {"tie_word_embeddings": False}},
+        },
         chat_template=ChatTemplateKind.HF_MULTIMODAL_PROCESSOR,
-    ),
-    "qwen3_5_35b_a3b": ModelConfig(
-        alias="qwen3_5_35b_a3b",
-        hf_id="Qwen/Qwen3.5-35B-A3B",
-        is_multimodal=False,
-        vllm_engine_kwargs={},
-        chat_template=ChatTemplateKind.MISTRAL_TOKENIZER,
-        image_placeholder_text="<image>",
     ),
     "gpt_oss_20b": ModelConfig(
         alias="gpt_oss_20b",
